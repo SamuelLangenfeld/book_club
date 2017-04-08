@@ -1,24 +1,3 @@
-# README
+# Book Club App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A simple rails app for my book club. I want the app to show scheduled meetings, what books we've chosen, and allow users to take private notes and have public discussions. In progress.
