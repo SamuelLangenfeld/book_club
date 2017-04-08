@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BookClub</title>
+  <head lang="en" >
+    <title>Book Club</title>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,5 +11,8 @@
 
   <body>
     <%= yield %>
+    <div>
+      <%= link_to "Home", root_path %>
+    </div>
   </body>
 </html>
