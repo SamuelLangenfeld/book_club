@@ -10,6 +10,22 @@
   </head>
 
   <body>
+    <div>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">NOVA Wine and Book Club</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/books">Our Bookshelf</a></li>
+            <% if user_signed_in? %>
+              <li><%=link_to "My Profile", user_path(current_user)%></li>
+            <% end %>
+            <li></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <%= yield %>
     <div>
       <%= link_to "Home", root_path %>
