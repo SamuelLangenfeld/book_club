@@ -20,15 +20,15 @@
             <li><a href="/books">Our Bookshelf</a></li>
             <% if user_signed_in? %>
               <li><%=link_to "My Profile", user_path(current_user)%></li>
+            <% else %>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
             <% end %>
-            <li></li>
           </ul>
         </div>
       </nav>
     </div>
-    <%= yield %>
-    <div>
-      <%= link_to "Home", root_path %>
+    <div class="container"">
+      <%= yield %>
     </div>
   </body>
 </html>
