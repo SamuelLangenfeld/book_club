@@ -18,7 +18,7 @@
       <tr>
         <td><%= meeting.date %></td>
         <td><%= meeting.time %></td>
-        <td><%= meeting.book %></td>
+        <td><%= meeting.book.title %></td>
         <td><%= meeting.location %></td>
         <td><%= link_to 'Show', meeting %></td>
         <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>

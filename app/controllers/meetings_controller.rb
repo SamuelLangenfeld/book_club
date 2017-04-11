@@ -1,5 +1,6 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create]
 
   # GET /meetings
   # GET /meetings.json
@@ -15,10 +16,12 @@ class MeetingsController < ApplicationController
   # GET /meetings/new
   def new
     @meeting = Meeting.new
+    @book = Book.find(params[:book_id])
   end
 
   # GET /meetings/1/edit
   def edit
+    @book = Meeting.find(params[:id]).book
   end
 
   # POST /meetings

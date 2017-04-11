@@ -14,3 +14,34 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.jumbotron{
+  background-color: #FFF;
+  color:#1C140D;
+  background-color: #FFF;
+
+}
+
+.heading{
+  font-family: 'Volkorn', serif;
+  text-align:center;
+  
+}
+
+body{
+  background-color: #CBE86B;
+}
+
+.content{
+  background-color: #FFF;
+  border-radius:10px;
+  padding:5px;
+}
+
+.small-data{
+  width:180px;
+}
+
+.row{
+  margin-bottom:20px;
+}

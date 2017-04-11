@@ -5,12 +5,20 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    unless user_signed_in?
+      flash[:notice]= "You must be signed in to see other users"
+      redirect_to root_path
+    end
     @users = User.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    unless user_signed_in?
+      flash[:notice]= "You must be signed in to see other users"
+      redirect_to root_path
+    end
     @user=User.find(params[:id])
   end
 
