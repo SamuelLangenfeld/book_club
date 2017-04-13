@@ -2,7 +2,8 @@
   <div class="col-md-6 col-md-offset-3">
     <div class="jumbotron">
       <div class="heading">
-        <h2> Welcome to the NOVA Wine and Book Club!</h2>
+        <h2> Welcome to the NOVA Book and Wine Club!</h2>
+        <%= image_tag "logo_md.png" %>
       </div>
       <% if user_signed_in? %>
         <p><%= link_to "Sign out", destroy_user_session_path, method: :delete%></p>

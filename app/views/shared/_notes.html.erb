@@ -1,0 +1,18 @@
+<div class="heading">
+  <div class="content-title">
+    <h2>Private Notes</h2>
+  </div>
+</div>
+
+<% @notes=@user.notes.select {|note| note.book_id==@book.id} %>
+<% @notes.each do |note| %>
+  <div class="note"><%= note.content %></div>
+<% end %>
+<div>
+  <%= form_for(Note.new) do |f| %>
+  <%= f.text_area :content, value:"Write your private notes here" %>
+  <%= f.hidden_field :user_id, :value=>@user.id %>
+  <%= f.hidden_field :book_id, :value=>@book.id %>
+  <%= f.submit %>
+  <% end %>
+</div>

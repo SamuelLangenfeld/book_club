@@ -6,12 +6,13 @@
 <div class="row">
   <div class="col-md-12">
     <div class="content">
-      <table class="table table-bordered table-hover">
+      <table class="table table-bordered table-hover" id="bookshelf">
         <thead>
           <tr>
             <th >Title</th>
             <th>Author</th>
-            <th colspan="2"> Meeting<br>Date/Location</th>
+            <th>Meeting Date</th>
+            <th>Location</th>
         </thead>
 
         <tbody>
@@ -21,12 +22,12 @@
               <td><%= book.author_first_name+" "+book.author_last_name %></td>
               <td>
                 <% unless book.meeting.nil? %>
-                  <%= book.meeting.location %>
+                  <%= book.meeting.date %>
                 <% end %>
               </td>
               <td>
                 <% unless book.meeting.nil? %>
-                  <%= book.meeting.date %>
+                  <%= book.meeting.location %>
                 <% end %>
               </td>
             </tr>
@@ -34,7 +35,7 @@
         </tbody>
       </table>
       <% if user_signed_in? %>
-        <div>
+        <div class="add-new">
           <%= link_to raw('<span class="glyphicon glyphicon-plus"></span>Add New Book'), new_book_path%>
         </div>
       <% end %>
