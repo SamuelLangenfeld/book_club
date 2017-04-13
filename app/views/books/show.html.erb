@@ -2,12 +2,8 @@
   <div class="col-md-4 col-md-offset-4 content">
     <div class="heading">
       <h1><%= @book.title %></h1>
-      <h2>by <%= @book.author_first_name+" "+@book.author_last_name %></h2>
+      <h2>by <%= get_author_full_name(@book) %></h2>
     </div>
   </div>
 </div>
-<% if @user%>
-  <%= render 'registered_user' %>
-<% else %>
-  <%= render 'unregistered_user' %>
-<% end %>
+<%= render get_view_for_user_type %>
