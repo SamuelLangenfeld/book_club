@@ -64,7 +64,15 @@ h1, h2{
   margin-top:30px;
 }
 
-.note, #note_content{
+#note_content{
+  background-color:#fefdca;
+  min-height:250px;
+  width:100%;
+  padding:4px;
+  border:none;
+}
+
+.new_note, .edit_note{
   background-color:#fefdca;
   min-height:250px;
   border-color:black;
@@ -72,6 +80,11 @@ h1, h2{
   border-width:1px;
   width:100%;
   padding:4px;
+   
+}
+
+.note{
+  margin-bottom:10px; 
 }
 
 #bookshelf{
@@ -86,7 +99,7 @@ h1, h2{
 
 .navbar-head-text{
   display:inline-block;
-  color:grey;
+  color:#9d9d9d;
   font-size:16px;
   padding:0px;
   padding-left:0px;
@@ -101,4 +114,8 @@ h1, h2{
 
 .add-new{
   padding:8px;
+}
+
+.add-meeting{
+  display:inline-block;
 }

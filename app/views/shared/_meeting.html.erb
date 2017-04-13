@@ -1,13 +1,22 @@
-    <div class="heading">
-      <div class="content-title">
-        <h2>Meeting</h2>
-      </div>
-    </div>
+<div class="heading">
+  <div class="content-title">
+    <h2>Meeting Info</h2>
+  </div>
+</div>
 
-    <div class="content">
-    <p><b>Date</b>: <%= @book.meeting.date %></p>
-    <p><b>Time</b>: <%= @book.meeting.time %></p>
-    <p><b>Location</b>: <%= @book.meeting.location %></p>
-    <%= link_to 'Edit', edit_meeting_path(@book.meeting)%> | <%= link_to 'Delete Meeting', @book.meeting, method: :delete, data: {confirm: 'Are you sure you want to delete this meeting?'} %>
-    </div>
+<% if @book.meeting.nil? %>
+  <div class="content">
+    <%= link_to raw('<span class="glyphicon glyphicon-plus"></span>Add A Meeting For This Book'), new_meeting_path(:book_id=> @book.id)%>
+  </div>
+
+<% else %>
+
+  <div class="content">
+  <p><b>Date</b>: <%= @book.meeting.date %></p>
+  <p><b>Time</b>: <%= @book.meeting.time %></p>
+  <p><b>Location</b>: <%= @book.meeting.location %></p>
+  <%= link_to 'Edit', edit_meeting_path(@book.meeting)%> | <%= link_to 'Delete', @book.meeting, method: :delete, data: {confirm: 'Are you sure you want to delete this meeting?'} %>
+  </div>
+
+<% end %>
 

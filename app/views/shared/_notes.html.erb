@@ -6,13 +6,22 @@
 
 <% @notes=@user.notes.select {|note| note.book_id==@book.id} %>
 <% @notes.each do |note| %>
-  <div class="note"><%= note.content %></div>
+  <div class="note">
+    <%= form_for note do |f|%>
+    <%= f.text_area :content%>
+    <%= f.hidden_field :user_id, :value=>note.user.id %>
+    <%= f.hidden_field :book_id, :value=>note.book.id %>
+    <%= f.hidden_field :id, :value=>note.id %>
+    <%= f.submit :value=>'Save Note' %>
+    <% end %>
+    <%= link_to "delete note", note_path(:note=>{id:note.id}), method: :delete %>
+  </div>
 <% end %>
-<div>
+<div class="note">
   <%= form_for(Note.new) do |f| %>
-  <%= f.text_area :content, value:"Write your private notes here" %>
+  <%= f.text_area :content, value:"You can take notes here while you read the book" %>
   <%= f.hidden_field :user_id, :value=>@user.id %>
   <%= f.hidden_field :book_id, :value=>@book.id %>
-  <%= f.submit %>
+  <%= f.submit value:'Add New Note' %>
   <% end %>
 </div>
