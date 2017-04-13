@@ -14,12 +14,14 @@
     <%= f.hidden_field :id, :value=>note.id %>
     <%= f.submit :value=>'Save Note' %>
     <% end %>
-    <%= link_to "delete note", note_path(:note=>{id:note.id}), method: :delete %>
+    <div class="right-align">
+      <%= link_to "Delete Note", note_path(:note=>{id:note.id}), :class=>"btn btn-default", method: :delete %></button>
+    </div>
   </div>
 <% end %>
 <div class="note">
   <%= form_for(Note.new) do |f| %>
-  <%= f.text_area :content, value:"You can take notes here while you read the book" %>
+  <%= f.text_area :content, placeholder:"You can take notes here while you read the book" %>
   <%= f.hidden_field :user_id, :value=>@user.id %>
   <%= f.hidden_field :book_id, :value=>@book.id %>
   <%= f.submit value:'Add New Note' %>

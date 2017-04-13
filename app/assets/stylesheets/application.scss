@@ -37,6 +37,9 @@ body{
   background-color: #FFF;
   border-radius:10px;
   padding:15px;
+  border-width:1px;
+  border-style:solid;
+  border-color:black;
 
 }
 
@@ -62,17 +65,23 @@ h1, h2{
   padding:0px 15px;
   margin-bottom:10px;
   margin-top:30px;
+  border-color:black;
+  border-style:solid;
+  border-width:1px;
 }
 
 #note_content{
   background-color:#fefdca;
-  min-height:250px;
   width:100%;
   padding:4px;
   border:none;
+  min-height:250px; 
+
 }
 
-.new_note, .edit_note{
+.new_note,{
+  min-height:250px;
+
   background-color:#fefdca;
   min-height:250px;
   border-color:black;
@@ -80,11 +89,24 @@ h1, h2{
   border-width:1px;
   width:100%;
   padding:4px;
+  textarea{
+    min-height:250px;
+  }
    
 }
 
+.edit_note{
+  background-color:#fefdca;
+  border-color:black;
+  border-style:dotted;
+  border-width:1px;
+  width:100%;
+  padding:4px;
+
+}
+
 .note{
-  margin-bottom:10px; 
+  margin-bottom:10px;
 }
 
 #bookshelf{
@@ -118,4 +140,8 @@ h1, h2{
 
 .add-meeting{
   display:inline-block;
+}
+
+.right-align{
+  text-align:right;
 }

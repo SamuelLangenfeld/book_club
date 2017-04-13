@@ -20,7 +20,7 @@
               <td><%= get_author_full_name(book) %></td>
               <td>
                 <% if book.meeting %>
-                  <%= book.meeting.date %>
+                  <%= format_date(book.meeting.date) %>
                 <% end %>
               </td>
               <td>
