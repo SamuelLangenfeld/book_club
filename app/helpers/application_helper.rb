@@ -9,6 +9,8 @@ module ApplicationHelper
     if hour_int>12
       hour_int-=12
       am_or_pm="PM"
+    elsif hour_int==12
+      am_or_pm="PM"        
     elsif hour_int==0
       hour_int=12
       am_or_pm="AM"

@@ -1,6 +1,17 @@
-<h1>Editing Book</h1>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="heading content">
+      <h1>Editing Book</h1>
+    </div>
+  </div>
+</div>
 
-<%= render 'form', book: @book %>
-
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', books_path %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="content">
+      <%= render 'form', book: @book %>
+      <%= link_to 'Back To Book Page', @book %> |
+      <%= link_to 'Bookshelf', books_path %>
+    </div>
+  </div>
+</div>
