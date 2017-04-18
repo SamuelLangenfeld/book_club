@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :meetings
   resources :books
-  resources :users
+  resources :users, only: [:show, :index]
   post '/notes', to: 'notes#create'
   patch '/note', to: 'notes#update'
   delete '/note', to: 'notes#destroy'

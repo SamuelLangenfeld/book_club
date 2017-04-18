@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :destroy]
+  before_action :set_user, only: [:edit, :update, :destroy, :show]
   before_action :authenticate_user!, only: [:edit, :update]
 
   # GET /users
@@ -15,8 +15,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    unless user_signed_in?
-      flash[:notice]= "You must be signed in to see other users"
+    unless @user==User.find(params[:id])
+      flash[:notice]= "You can only see your own profile."
       redirect_to root_path
     end
     @user=User.find(params[:id])
