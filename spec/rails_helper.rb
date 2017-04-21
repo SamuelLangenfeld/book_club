@@ -36,6 +36,25 @@ ActiveRecord::Migration.maintain_test_schema!
     return second
   end
 
+  def create_users
+    valid_user
+    second_user
+  end
+
+  def create_books
+    book=Book.create!({title: "IT", author_first_name: "Stephen", author_last_name: "King"})
+    return book
+  end
+
+  def clear_database
+    User.all.each do |user|
+      user.destroy
+    end
+    Book.all.each do |book|
+      book.destroy
+    end
+  end
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"

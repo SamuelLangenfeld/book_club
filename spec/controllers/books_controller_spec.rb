@@ -7,11 +7,12 @@ RSpec.describe BooksController, type: :controller do
   }
 
   before(:all) do
-    User.all.each do |user|
-      user.destroy
-    end
-    @user=valid_user
-    @second_user=second_user
+    create_users
+    @user=User.first
+  end
+
+  after(:all) do
+    clear_database
   end
 
   render_views

@@ -1,4 +1,7 @@
 class NotesController < ApplicationController
+  before_action :correct_user?, only: [:update, :destroy]
+  before_action :authenticate_user!
+
   def create
     @note = Note.new(note_params)
     respond_to do |format|
@@ -20,11 +23,9 @@ class NotesController < ApplicationController
 
   def destroy
     @note=Note.find(note_params[:id])
-    if correct_user?(@note)
-      @note.destroy
-      flash[:notice]='Note deleted'
-      redirect_to :back
-    end
+    @note.destroy
+    flash[:notice]='Note deleted'
+    redirect_back(fallback_location: root_path)
   end
 
   private
@@ -32,8 +33,10 @@ class NotesController < ApplicationController
     params.require(:note).permit(:content, :user_id, :book_id, :id)
   end
 
-  def correct_user?(note)
-    current_user==User.find(note.user_id)
+  def correct_user?
+    unless current_user==User.find(note_params[:user_id])
+      redirect_to new_user_session_path
+    end
   end
 
 end
