@@ -53,6 +53,12 @@ ActiveRecord::Migration.maintain_test_schema!
     Book.all.each do |book|
       book.destroy
     end
+    Note.all.each do |note|
+      note.destroy
+    end
+    Meeting.all.each do |meeting|
+      meeting.destroy
+    end
   end
 
 RSpec.configure do |config|

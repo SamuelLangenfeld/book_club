@@ -35,8 +35,8 @@ body{
   background-color: #CBE86B;
   font-size:16px;
   padding-top:70px;
-  min-height:100%;
-  padding-bottom:50px;
+  height:100%;
+  padding-bottom:0px;
   overflow-x:hidden;
 }
 
@@ -155,9 +155,10 @@ h1, h2{
 }
 
 .footer{
-  position:fixed;
-  bottom:0px;
+  position:relative;
+  top:-30px;
   width:100%;
+  veritcal-align: bottom;
   .navbar{
     border-top-width:1px;
     border-top-style:solid;
@@ -165,7 +166,6 @@ h1, h2{
     width:100%;
 
     margin-bottom:0px;
-    margin-top:40px;
     min-height:30px;
     height:30px;
     background-color:white;
@@ -184,4 +184,12 @@ h1, h2{
 .home-links{
   position:relative;
   bottom:0px;
+}
+
+html{
+  height:100%;
+}
+
+.main-content{
+  min-height:100%;
 }

@@ -4,6 +4,7 @@ module ApplicationHelper
   end
 
   def format_time(time)
+      
     hour_int=time[0..1].to_i
     am_or_pm=""
     if hour_int>12
@@ -18,6 +19,10 @@ module ApplicationHelper
       am_or_pm="AM"
     end
 
-    time_string= hour_int.to_s+time[2..4]+" "+am_or_pm      
+    if hour_int.nil? || time[2..4].nil?
+      time_string=""
+    else
+      time_string= hour_int.to_s+time[2..4]+" "+am_or_pm
+    end
   end
 end
