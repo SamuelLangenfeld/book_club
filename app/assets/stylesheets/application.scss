@@ -40,6 +40,12 @@ body{
   overflow-x:hidden;
 }
 
+@media screen and (max-width: 767px){
+  body{
+    padding-top:270px;
+  }
+}
+
 html{
   height:100%;
 }

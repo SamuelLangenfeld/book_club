@@ -20,7 +20,7 @@ RSpec.describe ApplicationHelper, type: :helper do
     end
 
     context "the entered time is valid" do
-      it "returns the time formatted into 12 hr day, hh:mm am/pm" do
+      it "returns the time formatted into 12 hr day, (h)h:mm (am/pm)" do
         time_string="18:34"
         expect(format_time(time_string)).to eq("6:34 PM")
       end

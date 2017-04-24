@@ -30,9 +30,13 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 
+gem "mini_magick"
+
 gem 'rails-controller-testing'
 
 gem 'simplecov', :require => false, :group => :test
+
+gem 'carrierwave', '~> 1.0'
 
 gem 'bootstrap-sass', '3.3.6'
 # Use Redis adapter to run Action Cable in production
