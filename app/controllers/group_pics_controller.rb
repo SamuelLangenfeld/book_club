@@ -1,7 +1,7 @@
 class GroupPicsController < ApplicationController
   def create
     @pic = GroupPic.new(group_pic_params)
-    @pic.picture.resize_to_limit(800, 800)
+    @pic.picture.resize_and_pad(800, 500)
     respond_to do |format|
       if @pic.save
         format.html { redirect_to Book.find(@pic.book_id), notice: 'Note was successfully created.' }

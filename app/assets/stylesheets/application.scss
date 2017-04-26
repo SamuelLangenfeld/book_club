@@ -16,12 +16,13 @@
 @import "bootstrap";
 
 $gray-medium-light: #eaeaea;
-
+$book-green: #CBE86B;
 
 .jumbotron{
   background-color: #FFF;
   color:#1C140D;
   background-color: #FFF;
+  padding: 10px 50px;
 
 }
 
@@ -32,18 +33,13 @@ $gray-medium-light: #eaeaea;
 }
 
 body{
-  background-color: #CBE86B;
+  
+  background-color: $book-green;
   font-size:16px;
   padding-top:70px;
   height:100%;
   padding-bottom:0px;
   overflow-x:hidden;
-}
-
-@media screen and (max-width: 767px){
-  body{
-    padding-top:270px;
-  }
 }
 
 html{
@@ -199,4 +195,34 @@ html{
 .main-content{
   min-height:100%;
   padding-bottom:40px;
+}
+
+.carousel-indicators{
+  li{
+    border-color:black;
+    background-color:white;
+  }
+  .active{
+    background-color:black;
+  }
+}
+
+.welcome-message{
+ color:white;
+ font-family:Montserrat;
+}
+
+.welcome-page{
+
+  position:fixed;
+  height:100%;
+  width:100%;
+  background-image:url(home_background.jpg);
+  background-repeat:no-repeat;
+  background-size: 100% auto;
+  background-position:center;
+  left:0px;
+  top:50px;
+  padding-top:25px;
+  
 }
