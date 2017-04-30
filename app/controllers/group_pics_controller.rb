@@ -4,7 +4,7 @@ class GroupPicsController < ApplicationController
     @pic.picture.resize_and_pad(800, 500)
     respond_to do |format|
       if @pic.save
-        format.html { redirect_to Book.find(@pic.book_id), notice: 'Note was successfully created.' }
+        format.html { redirect_to Book.find(@pic.book_id), notice: 'Picture was successfully uploaded.' }
       else
         format.html { render 'static_pages/home' }
         format.json { render json: @note.errors, status: :unprocessable_entity }
