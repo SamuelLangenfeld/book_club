@@ -223,8 +223,10 @@ h1, h2{
 }
 
 .home-links{
+  margin-top: 20px;
   position:relative;
   bottom:0px;
+  font-size:22px
 }
 
 html{
@@ -283,4 +285,8 @@ html{
   border-width:1px;
   border-style:solid;
   border-color:black;
+}
+
+.text-paragraph{
+  text-indent:10px;
 }
