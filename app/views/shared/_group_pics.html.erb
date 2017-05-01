@@ -12,15 +12,15 @@
 
 <% unless @group_pics.empty? %>
 <div class="row">
-  <div class="col-md-12" style="text-align:center;">
-    <div style="display:inline-block; ">
-      <div id="example" class="carousel slide" data-ride="carousel" data-interval="null" style="height:500px;"> 
+  <div class="col-md-12 centered">
+    <div class="carousel-container">
+      <div id="group-pic-carousel" class="carousel slide" data-ride="carousel" data-interval="null" style="height:500px;"> 
 
         <!-- indicators -->
         
         <ol class="carousel-indicators" >
           <% @group_pics.each_with_index do |pic, i| %>
-            <li data-target="#example" data-slide-to=<%=i.to_s%>
+            <li data-target="#group-pic-carousel" data-slide-to=<%=i.to_s%>
             <% if i==0 %>
               class="active"
             <% end %>
@@ -45,11 +45,11 @@
 
 
           <!-- Controls -->
-          <a class="left carousel-control" href="#example" role="button" data-slide="prev">
+          <a class="left carousel-control" href="#group-pic-carousel" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="right carousel-control" href="#example" role="button" data-slide="next">
+          <a class="right carousel-control" href="#group-pic-carousel" role="button" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
