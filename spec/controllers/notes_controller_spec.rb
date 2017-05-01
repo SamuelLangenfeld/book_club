@@ -38,7 +38,7 @@ RSpec.describe NotesController, type: :controller do
     end
 
     context 'user is signed in, book is not specified' do
-      it "not save the note" do
+      it "does not save the note" do
         sign_in(@user)
         post :create, params: {note:{content:"some content", user_id:@user.id}}
         expect(Note.all.empty?).to be true
@@ -125,14 +125,14 @@ RSpec.describe NotesController, type: :controller do
       it "redirects to login page" do
         sign_in(@second_user)
         note=Note.create! valid_attributes
-        delete :destroy, params: {note: valid_attributes}
+        delete :destroy, params: {note:{id: note.id}}
         expect(response).to redirect_to(new_user_session_path)
       end
       it "doesn't delete the note" do
         sign_in(@second_user)
         note=Note.create! valid_attributes
         expect{
-          delete :destroy, params: {note: valid_attributes}
+          delete :destroy, params: {note: {id:note.id}}
           }.to_not change(Note, :count)
       end
     end
