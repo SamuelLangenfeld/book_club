@@ -34,7 +34,7 @@ class NotesController < ApplicationController
   end
 
   def correct_user?
-    unless current_user==User.find(note_params[:user_id])
+    unless current_user==Note.find(note_params[:id]).user
       redirect_to new_user_session_path
     end
   end
