@@ -1,6 +1,8 @@
-# NOVA Book and Wine Club
+# [NOVA Book and Wine Club](www.novabookandwineclub.com)
 
 A Ruby on Rails app for my book club. The app lets users add books to the group bookshelf, schedule meetings, post pictures of meetings, and take notes for books they are reading.
+
+The app is run on Elasticbeanstalk and hosted by Amazon Web Services.
 
 ![welcome screenshot](https://github.com/SamuelLangenfeld/book_club/blob/master/app/assets/images/welcome_screenshot.png?raw=true)
 
