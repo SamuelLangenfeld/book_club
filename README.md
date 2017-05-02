@@ -1,4 +1,4 @@
-# [NOVA Book and Wine Club](www.novabookandwineclub.com)
+# [NOVA Book and Wine Club](http://www.novabookandwineclub.com)
 
 A Ruby on Rails app for my book club. The app lets users add books to the group bookshelf, schedule meetings, post pictures of meetings, and take notes for books they are reading.
 
