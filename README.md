@@ -16,9 +16,11 @@ The bookshelf is where users can see all of the books the group has read or is c
 
 From the bookshelf users can select a book to view. The book's page shows the user the title, author, the group meeting, pictures from the meeting, and the users private notes on the book. The user can edit or create any of these attributes.
 
-![add meeting screenshot](https://github.com/SamuelLangenfeld/book_club/blob/master/app/assets/images/add_meeting_screenshot.png?raw=true)
+![meeting screenshot](https://github.com/SamuelLangenfeld/book_club/blob/master/app/assets/images/meeting_screenshot.png?raw=true)
 
-![add picture and notes screenshot](https://github.com/SamuelLangenfeld/book_club/blob/master/app/assets/images/picture_and_notes_screenshot.png?raw=true)
+![pictures screenshot](https://github.com/SamuelLangenfeld/book_club/blob/master/app/assets/images/pictures_screenshot.png?raw=true)
+
+![notes screenshot](https://github.com/SamuelLangenfeld/book_club/blob/master/app/assets/images/notes_screenshot.png?raw=true)
 
 
 ## Built With
