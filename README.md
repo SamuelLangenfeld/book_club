@@ -2,6 +2,7 @@
 
 A Ruby on Rails app for my book club. The app lets users add books to the group bookshelf, schedule meetings, post pictures of meetings, and take notes for books they are reading.
 
+![welcome screenshot]()
 
 ## Walkthrough
 
@@ -14,10 +15,11 @@ A Ruby on Rails app for my book club. The app lets users add books to the group 
 
 ## Testing With
 * [RSpec](http://rspec.info/)
+* [SimpleCov](https://github.com/colszowka/simplecov)
 
 
 ## Future Functions
 Let users add wines we've sampled.
 Implement rating system for books and wines.
 Sidebar for easy navigation on large pages.
-Implement email for app to allow for confirmable users.
+Implement email for app to confirm users on registration and send club updates.
