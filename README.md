@@ -12,6 +12,9 @@ A Ruby on Rails app for my book club. The app lets users add books to the group 
 * [CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
 * [Figaro](https://github.com/laserlemon/figaro)
 
+## Testing With
+* [RSpec](http://rspec.info/)
+
 
 ## Future Functions
 Let users add wines we've sampled.
