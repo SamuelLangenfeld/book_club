@@ -36,7 +36,6 @@ From the bookshelf users can select a book to view. The book's page shows the us
 
 
 ## Future Functions
-Let users add wines we've sampled.  
-Implement rating system for books and wines.  
-Sidebar for easy navigation on large pages.  
-Implement email for app to confirm users on registration and send club updates.
+  Let users add wines we've sampled.  
+  Implement rating system for books and wines.  
+  Implement email for app to confirm users on registration and send club updates.
