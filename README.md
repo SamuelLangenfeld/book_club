@@ -6,11 +6,11 @@ A Ruby on Rails app for my book club. The app lets users add books to the group 
 ## Walkthrough
 
 ## Built With
-*[Ruby on Rails](http://rubyonrails.org/)
-*[Bootstrap](http://getbootstrap.com/)
-*[Devise](http://devise.plataformatec.com.br/)
-*[CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
-*[Figaro](https://github.com/laserlemon/figaro)
+* [Ruby on Rails](http://rubyonrails.org/)
+* [Bootstrap](http://getbootstrap.com/)
+* [Devise](http://devise.plataformatec.com.br/)
+* [CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
+* [Figaro](https://github.com/laserlemon/figaro)
 
 
 ## Future Functions
