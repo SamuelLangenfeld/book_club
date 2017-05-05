@@ -68,7 +68,7 @@ $book-green: #CBE86B;
 .heading{
   font-family: 'Volkorn', serif;
   text-align:center;
-  
+
 }
 
 body{
@@ -87,10 +87,11 @@ html{
 .content{
   background-color: #FFF;
   border-radius:10px;
-  padding:15px;
+  padding:15px 30px;
   border-width:1px;
   border-style:solid;
   border-color:black;
+  display:inline-block;
 
 }
 
@@ -272,6 +273,9 @@ html{
   text-align:center;
 }
 
+.left-align{
+  text-align:left;
+}
 .carousel-container{
   display:inline-block;
 }

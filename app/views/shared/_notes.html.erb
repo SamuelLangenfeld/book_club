@@ -6,7 +6,7 @@
 
 <% @notes=@user.notes.select {|note| note.book_id==@book.id} %>
 <% @notes.each do |note| %>
-  <div class="note">
+  <div class="note left-align">
     <%= form_for note do |f|%>
     <%= f.text_area :content%>
     <%= f.hidden_field :user_id, :value=>note.user.id %>
@@ -19,7 +19,7 @@
     </div>
   </div>
 <% end %>
-<div class="note">
+<div class="note left-align">
   <%= form_for(Note.new) do |f| %>
   <%= f.text_area :content, placeholder:"You can take notes here while you read the book" %>
   <%= f.hidden_field :user_id, :value=>@user.id %>
