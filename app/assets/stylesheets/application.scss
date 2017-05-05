@@ -92,6 +92,9 @@ html{
   border-style:solid;
   border-color:black;
   display:inline-block;
+  h2{
+    display:inline-block;
+  }
 
 }
 
@@ -293,4 +296,17 @@ html{
 
 .text-paragraph{
   text-indent:10px;
+}
+
+#bookshelf{
+  th{
+    padding:8px 18px;
+  }
+  td{
+    padding:8px 18px;
+  }
+}
+
+table{
+  min-width:125px;
 }
