@@ -58,18 +58,20 @@
     </div>
   <% end %>
 
-  <% unless @group_pics.size>10%>
-    <div style="text-align:center">
-      <div class="content-form" style="text-align: left;">
-      <%= form_for GroupPic.new do |f|%>
-        <%= f.hidden_field :book_id, :value=>@book.id %>
-        <div style="text-align:center;">
-        <h4>Add Picture</h4>
+  <% if user_signed_in? %>
+    <% unless @group_pics.size>10%>
+      <div style="text-align:center">
+        <div class="content-form" style="text-align: left;">
+        <%= form_for GroupPic.new do |f|%>
+          <%= f.hidden_field :book_id, :value=>@book.id %>
+          <div style="text-align:center;">
+          <h4>Add Picture</h4>
+          </div>
+          <%= f.file_field :picture, :required=>true%>
+          <%= f.submit "Upload Picture" %>
+        <% end %>
         </div>
-        <%= f.file_field :picture, :required=>true%>
-        <%= f.submit "Upload Picture" %>
-      <% end %>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
