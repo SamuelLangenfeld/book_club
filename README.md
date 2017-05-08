@@ -8,6 +8,8 @@ The app is run on Elastic Beanstalk and hosted by Amazon Web Services.
 
 ## Walkthrough
 
+For guest sign in credentials use **email:** <span>example@</span>example.com and **password:** password.
+
 Currently users must register to create, but their email addresses are not confirmed. Anyone who is not signed in can only see the club's bookshelf. Registered users have access to the bookshelf and can see other users in the group and can create and edit group content and private notes.
 
 The bookshelf is where users can see all of the books the group has read or is currently reading.
